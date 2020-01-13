@@ -1,0 +1,45 @@
+﻿
+<div>
+    <span style="color: red;"> <a routerLink="/home"><u>New Feedback</u> </a></span>
+    <span style="color: red;margin-left: 20px;"><a routerLink="/gridView" class="btn btn-link"><u>List</u></a></span>
+    
+</div><br>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Project Name</th>
+        <th>Rating</th>
+        <th>Comment</th>
+        <th>MgrRating</th>
+        <th>MgrComment</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let domain of domains">
+        <td>
+          <span >{{domain.name}}</span>
+          <input type="text" class="form-control" *ngIf="domain.editable"/>
+        </td>
+        <td>
+          <span >{{domain.reg_date}}</span>
+           <input type="text" class="form-control"  *ngIf="domain.editable"/>
+        </td>
+        <td>
+            <span >--</span>
+             <input type="text" class="form-control"  />
+          </td>
+          <td>
+            <span >--</span>
+             <input type="text" class="form-control" />
+          </td>
+          
+          <td>
+            <span >--</span>
+             <input type="text" class="form-control" />
+          </td>
+        <td><button class="btn btn-primary" (click)="editDomain(domain)">Edit</button></td>
+      </tr>
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>

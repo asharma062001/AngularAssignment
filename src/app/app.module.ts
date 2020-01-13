@@ -12,6 +12,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
+import { ManagerViewComponent } from './managerView';
+import { NewFeedbackComponent } from './newFeedback';
+import { GridViewComponent } from './gridView';
 import { AlertComponent } from './_components';
 
 @NgModule({
@@ -26,6 +29,9 @@ import { AlertComponent } from './_components';
         HomeComponent,
         LoginComponent,
         RegisterComponent,
+        ManagerViewComponent,
+        NewFeedbackComponent,
+        GridViewComponent,
         AlertComponent
     ],
     providers: [
